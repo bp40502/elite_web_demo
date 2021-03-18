@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 05</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: rgb(137, 204, 137);
+        }
+        
+        header {
+            font-size: 3rem;
+            text-align: center;
+            font-family: DFKai-sb;
+            color: blue;
+        }
+        
+        article {
+            float: left;
+            width: 70%;
+            padding: 20px;
+        }
+        
+        aside {
+            float: right;
+            width: 20%;
+            padding: 20px;
+        }
+        
+        article p {
+            font-size: 2.5rem;
+        }
+        
+        article p::before {
+            content: ' ➢';
+        }
+        
+        article div {
+            border-style: solid;
+            border-width: 3px;
+            color: #8080f3;
+            background-color: rgb(212, 224, 247);
+        }
+        
+        aside div {
+            border-style: solid;
+            border-width: 3px;
+            border-color:#8080f3;
+            height: 300px;
+            background-color: rgb(212, 224, 247);
+            text-indent: 20px;
+        }
+        
+        div h4 {
+            color: gray;
+            text-indent: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p>有名小站</p>
+    </header>
+
+    <article>
+        <div>
+            <p><a href="page1.html">好想睡覺</a></p>
+            <h4>想睡zzzzzzzzz</h4>
+        </div>
+        <div>
+            <p><a href="">晚上要吃什麼</a></p>
+            <h4>餓22222222222</h4>
+        </div>
+        <div>
+            <p><a href="">啊啊啊啊啊啊啊啊</a></p>
+            <h4>啊rrrrrrrrrrr</h4>
+        </div>
+    </article>
+
+    <aside>
+        <div>
+            <il>
+                <li><a href="page1.html">好想睡覺</a></li>
+                <li><a href="">晚上要吃什麼</li>
+                <li><a href="">啊啊啊啊啊啊啊啊</li>
+            </il>
+        </div>
+    </aside>
+</body>
+
+</html>
