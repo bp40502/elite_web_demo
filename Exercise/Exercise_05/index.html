@@ -12,6 +12,9 @@
         body {
             background-image: url(https://i.imgur.com/GL7igry.png);
             background-size: cover;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
         }
         
         header {
@@ -22,46 +25,67 @@
             color: white;
         }
         
+        #content {
+            /* padding-bottom: 40px */
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
         article {
-            float: left;
-            width: 70%;
+            /* float: left;
+            width: 70%; */
             padding: 20px;
+            flex-grow: 4;
         }
         
         aside {
-            float: right;
-            width: 20%;
+            /* float: right;
+            width: 20%; */
             padding: 20px;
+            flex-grow: 1;
         }
         
         footer {
-            height: 30px;
+            /* height: 30px; */
             position: absolute;
             bottom: 0;
-            width: 100%;
+            min-width: 100vw;
             text-align: center;
             font-weight: 900;
             letter-spacing: 10px;
-        }
-        
-        article p {
-            font-size: 2.5rem;
-        }
-        
-        article p::before {
-            content: ' ➢ ';
         }
         
         article div {
             border-style: solid;
             border-width: 2px;
             border-radius: 30px;
-            color: #8080f3;
+            border-color: #8080f3;
             background-color: rgb(212, 224, 247);
             padding-left: 20px;
         }
         
-        aside div {
+        .article_title {
+            color: #8080f3;
+            font-size: 2rem;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .article_title ::before {
+            content: ' ➢ ';
+        }
+        
+        .article_content {
+            color: gray;
+            text-indent: 50px;
+            font-size: 0.5rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+        
+        #article_list {
             border-style: solid;
             border-width: 3px;
             height: 475px;
@@ -72,60 +96,45 @@
             padding: 30px 20px;
             line-height: 50px;
         }
-        
-        div h4 {
-            color: gray;
-            text-indent: 50px;
-        }
-        
-        #wrapper {
-            min-height: 100%;
-        }
-        
-        #content {
-            padding-bottom: 40px
-        }
     </style>
 </head>
 
 <body>
+    <header>
+        <p>有名小站</p>
+    </header>
 
-    <div id="wrapper">
-        <header>
-            <p>有名小站</p>
-        </header>
+    <div id="content">
+        <article>
+            <div>
+                <p class="article_title"><a href="page1.html">好想睡覺</a></p>
+                <p class="article_content">想睡zzzzzzzzz</p>
+            </div>
+            <div>
+                <p class="article_title"><a href="">晚上要吃什麼</a></p>
+                <p class="article_content">餓22222222222</p>
+            </div>
+            <div>
+                <p class="article_title"><a href="">啊啊啊啊啊啊啊啊</a></p>
+                <p class="article_content">啊rrrrrrrrrrr</p>
+            </div>
+        </article>
 
-        <div id="content">
-            <article>
-                <div>
-                    <p><a href="page1.html">好想睡覺</a></p>
-                    <h4>想睡zzzzzzzzz</h4>
-                </div>
-                <div>
-                    <p><a href="">晚上要吃什麼</a></p>
-                    <h4>餓22222222222</h4>
-                </div>
-                <div>
-                    <p><a href="">啊啊啊啊啊啊啊啊</a></p>
-                    <h4>啊rrrrrrrrrrr</h4>
-                </div>
-            </article>
-
-            <aside>
-                <div>
-                    <il>
-                        <li><a href="page1.html">好想睡覺</a></li>
-                        <li><a href="">晚上要吃什麼</a></li>
-                        <li><a href="">啊啊啊啊啊啊啊啊</a></li>
-                    </il>
-                </div>
-            </aside>
-        </div>
-
-        <footer>
-            <p>網站創立於 2021/3/24</p>
-        </footer>
+        <aside>
+            <div id="article_list">
+                <il>
+                    <li><a href="page1.html">好想睡覺</a></li>
+                    <li><a href="">晚上要吃什麼</a></li>
+                    <li><a href="">啊啊啊啊啊啊啊啊</a></li>
+                </il>
+            </div>
+        </aside>
     </div>
+
+    <footer>
+        <p>網站創立於 2021/3/24</p>
+    </footer>
+
 </body>
 
 </html>
