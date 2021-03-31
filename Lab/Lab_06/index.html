@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab_06</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: DFKai-sb;
+            background-image: url(https://i.imgur.com/GL7igry.png);
+            background-size: cover;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        header {
+            text-align: center;
+            font-size: 3rem;
+            color: rgb(255, 240, 240);
+            text-shadow: 5px 5px 3px black;
+        }
+        
+        #main {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        aside {
+            background-color: rgb(198, 164, 226);
+            height: 300px;
+            border-radius: 20px;
+            /* align-self: center; */
+        }
+        
+        article {
+            background-color: white;
+            margin: 50px;
+            margin-top: 0;
+            padding-left: 100px;
+            border-radius: 50px;
+            flex-grow: 1;
+            font-size: 1.5rem;
+            line-height: 80px;
+        }
+        
+        #event_title {
+            font-size: 3rem;
+        }
+        
+        table {
+            border-width: 5px;
+        }
+        
+        .title {
+            font-size: 2rem;
+        }
+        
+        .content {
+            font-size: 1rem;
+            background-color: rgb(199, 255, 153);
+        }
+        
+        th {
+            font-size: 1rem;
+            background-color: rgb(184, 221, 255);
+            height: "25px";
+            width: 150px;
+            border-radius: 10px;
+        }
+        
+        .content tr {
+            height: 40px;
+            text-align: center;
+        }
+        
+        .first_column {
+            width: 25px;
+            background-color: rgb(184, 221, 255);
+        }
+        
+        td {
+            border-radius: 10px;
+        }
+        
+        #rest {
+            background-color: rgb(255, 223, 117);
+            text-align: "center";
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>web 程式設計</h1>
+    </header>
+    <div id="main">
+        <aside>
+            <table>
+                <caption class="title">課表</caption>
+                <thead>
+                    <tr>
+                        <th class="first_column"></th>
+                        <th>一</th>
+                        <th>二</th>
+                        <th>三</th>
+                        <th>四</th>
+                        <th>五</th>
+                    </tr>
+                </thead>
+                <tbody class="content">
+                    <tr>
+                        <td class="first_column">08:10</td>
+                        <td>邏輯設計</td>
+                        <td>邏輯設計實習</td>
+                        <td>計算機概論(二)</td>
+                        <td>電路學(一)</td>
+                        <td>體育</td>
+                    </tr>
+                    <tr>
+                        <td class="first_column">09:10</td>
+                        <td>普通物理電、磁、光</td>
+                        <td>邏輯設計實習</td>
+                        <td>計算機概論(二)</td>
+                        <td>電路學(一)</td>
+                        <td>體育</td>
+                    </tr>
+                    <tr>
+                        <td class="first_column">10:10</td>
+                        <td>普通物理電、磁、光</td>
+                        <td>邏輯設計實習</td>
+                        <td>全民國防教育軍事訓練</td>
+                        <td>多元文化</td>
+                        <td>微積分(二)實習</td>
+                    </tr>
+                    <tr>
+                        <td class="first_column">11:10</td>
+                        <td>普通物理電、磁、光</td>
+                        <td>邏輯設計實習</td>
+                        <td>全民國防教育軍事訓練</td>
+                        <td>多元文化</td>
+                        <td>微積分(二)實習</td>
+                    </tr>
+                    <tr>
+                        <td class="first_column">12:00</td>
+                        <td id="rest" colspan="5">午休</td>
+                    </tr>
+                    <tr>
+                        <td class="first_column">13:10</td>
+                        <td>邏輯設計</td>
+                        <td>大一日文(二)</td>
+                        <td>微積分(二)</td>
+                        <td>大學國文(二)</td>
+                        <td>Android程式設計</td>
+                    </tr>
+                    <tr>
+                        <td class="first_column">14:10</td>
+                        <td>邏輯設計</td>
+                        <td>大一日文(二)</td>
+                        <td>微積分(二)</td>
+                        <td>大學國文(二)</td>
+                        <td>Android程式設計</td>
+                    </tr>
+                    <tr>
+                        <td class="first_column">15:10</td>
+                        <td>班級活動</td>
+                        <td>計算機概論(二)</td>
+                        <td>微積分(二)</td>
+                        <td>系統程式</td>
+                        <td>Android程式設計</td>
+                    </tr>
+                    <tr>
+                        <td class="first_column">16:10</td>
+                        <td>班級活動</td>
+                        <td>計算機概論(二)</td>
+                        <td>系統程式</td>
+                        <td>系統程式</td>
+                        <td>Android程式設計</td>
+                    </tr>
+                </tbody>
+            </table>
+        </aside>
+        <article>
+            <h3 id="event_title">重要事項</h3>
+            <il>
+                <li>鑒於校長中樂透，明天全校放假一天</li>
+                <li>今天 3/31</li>
+            </il>
+        </article>
+    </div>
+
+
+
+</body>
+
+</html>
