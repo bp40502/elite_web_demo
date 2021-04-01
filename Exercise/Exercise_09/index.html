@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 09</title>
+    <style type="text/css">
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #table {
+            width: 700px;
+            height: 500px;
+            display: grid;
+            grid-template: repeat(11, 1fr)/repeat(6, 1fr);
+        }
+        
+        #table>div {
+            display: grid;
+            text-align: center;
+            /* align-items: center; */
+        }
+        
+        .border_line_thin {
+            border-style: solid;
+            border-width: 1px;
+            border-color: gray;
+            /* margin: -1.5px -1.5px -1.5px -1.5px ; */
+        }
+        
+        .border_line {
+            border-style: solid;
+            border-width: 3px;
+            margin: -1.5px -1.5px -1.5px -1.5px;
+        }
+        
+        .border_line>div {
+            display: grid;
+            align-content: center;
+            border-style: solid;
+            border-width: 1px;
+            border-color: gray;
+            margin: -0.5px -0.5px -0.5px -0.5px;
+        }
+        
+        .button_line {
+            display: grid;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="table">
+        <div style="grid-area: 1/1/1 span/6 span; background-color: turquoise; margin: -1.5px -1.5px -1.5px -1.5px ; align-items: center;">資產負債表</div>
+        <div class="border_line" style="grid-area: 2/1/1 span/3 span; background-color: yellow; align-items: center;">資產</div>
+        <div class="border_line" style="grid-area: 2/4/1 span/3 span; background-color: yellow; align-items: center;">負債及股東權益</div>
+        <div class="border_line" style="grid-area: 3/1/4 span/3 span; grid-template: repeat(4, 1fr)/repeat(3, 1fr);">
+            <div style="grid-area: 1/1/4 span/1 span; background-color: yellowgreen;">流動資產</div>
+            <div style="grid-area: 1/2/1 span/1 span;">現金</div>
+            <div style="grid-area: 2/2/1 span/1 span;">存貨</div>
+            <div style="grid-area: 3/2/1 span/1 span;">應收帳款</div>
+            <div style="grid-area: 1/3/1 span/1 span;">399,526</div>
+            <div style="grid-area: 2/3/1 span/1 span;">819,954</div>
+            <div style="grid-area: 3/3/1 span/1 span;">945,494</div>
+            <div style="grid-area: 4/3/1 span/1 span;">2,164,974</div>
+        </div>
+        <div class="border_line" style="grid-area: 3/4/3 span/3 span; grid-template: repeat(3, 1fr)/repeat(3, 1fr);">
+            <div style="grid-area: 1/1/3 span/1 span; background-color: thistle;">流動負債</div>
+            <div style="grid-area: 1/2/1 span/1 span;">短期借款</div>
+            <div style="grid-area: 3/2/1 span/1 span;">應付帳款</div>
+            <div style="grid-area: 1/3/1 span/1 span;">1,634,870</div>
+            <div style="grid-area: 2/3/1 span/1 span;">1,912,740</div>
+            <div style="grid-area: 3/3/1 span/1 span;">277,870</div>
+        </div>
+        <div class="border_line" style="grid-area: 6/4/1 span/3 span; grid-template: 1fr/repeat(3, 1fr);">
+            <div style="grid-area: 1/1/1 span/1 span; background-color: violet;">非流動負債</div>
+            <div style="grid-area: 1/2/1 span/1 span;">長期借款</div>
+            <div style="grid-area: 1/3/1 span/1 span;">69,600</div>
+        </div>
+        <div class="border_line" style="grid-area: 7/1/4 span/3 span; grid-template: repeat(4, 1fr)/repeat(3, 1fr); margin-bottom: 0;">
+            <div style="grid-area: 1/1/4 span/1 span; background-color: rgb(39, 121, 14);">非流動資產</div>
+            <div style="grid-area: 1/2/4 span/1 span;">固定資產</div>
+            <div style="grid-area: 1/3/1 span/1 span;"></div>
+            <div style="grid-area: 3/3/1 span/1 span;">1,361,096</div>
+        </div>
+        <div class="border_line" style="grid-area: 7/4/1 span/3 span; grid-template: 1fr/repeat(3, 1fr);">
+            <div style="grid-area: 1/1/1 span/1 span; background-color: thistle;">負債合計</div>
+            <div style="grid-area: 1/3/1 span/1 span;">1,982,340</div>
+        </div>
+        <div class="border_line" style="grid-area: 8/4/3 span/3 span; grid-template: repeat(3, 1fr)/repeat(3, 1fr); margin-bottom: 0;">
+            <div style="grid-area: 1/1/2 span/1 span; background-color: rgb(21, 197, 74);">股東權益</div>
+            <div style="grid-area: 3/1/1 span/1 span; background-color: rgb(21, 197, 74);">股東權益合計</div>
+            <div style="grid-area: 1/2/1 span/1 span;">股本</div>
+            <div style="grid-area: 2/2/1 span/1 span;">保留盈餘</div>
+            <div style="grid-area: 1/3/1 span/1 span;">1,102,186</div>
+            <div style="grid-area: 2/3/1 span/1 span;">441,544</div>
+            <div style="grid-area: 3/3/1 span/1 span;">1,543,730</div>
+        </div>
+        <div style="grid-area: -2/1/1 span/-1 ; grid-template: 1fr/repeat(6, 1fr); background-color: yellow; margin: 0px -1.5px -1.5px -1.5px ;">
+            <div class="button_line" style="grid-area: 1/1/1 span/1 span;">資產合計</div>
+            <div class="button_line" style="grid-area: 1/3/1 span/1 span; border-bottom-style: dashed;">3,526,070</div>
+            <div class="button_line" style="grid-area: 1/4/1 span/1 span;">負債及股東權益</div>
+            <div class="button_line" style="grid-area: 1/6/1 span/1 span; border-bottom-style: dashed;">3,526,070</div>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
