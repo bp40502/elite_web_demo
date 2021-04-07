@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab_08</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <style type="text/css">
+        body {
+            font-family: DFKai-sb;
+            background-image: url(https://i.imgur.com/GL7igry.png);
+            background-size: cover;
+            min-height: 100vh;
+        }
+        
+        #page_title {
+            text-align: center;
+            color: rgb(255, 240, 240);
+            text-shadow: 5px 5px 3px black;
+            margin: 50px;
+        }
+        
+        aside {
+            background-color: rgb(198, 164, 226);
+            height: 510px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        article {
+            background-color: white;
+            margin: 50px;
+            margin-top: 0;
+            padding: 100px;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            line-height: 80px;
+        }
+        
+        #event_title {
+            font-size: 3rem;
+        }
+        
+        table {
+            border-width: 5px;
+        }
+        
+        .content {
+            font-size: 1rem;
+            background-color: rgb(199, 255, 153);
+        }
+        
+        th {
+            font-size: 1rem;
+            background-color: rgb(184, 221, 255);
+            height: "25px";
+            width: 150px;
+            border-radius: 10px;
+        }
+        
+        .content tr {
+            height: 40px;
+            text-align: center;
+        }
+        
+        .first_column {
+            width: 25px;
+            background-color: rgb(184, 221, 255);
+        }
+        
+        td {
+            border-radius: 10px;
+        }
+        
+        #rest {
+            background-color: rgb(255, 223, 117);
+            text-align: "center";
+        }
+    </style>
+
+</head>
+
+<body class="container-fluid d-flex flex-column justify-content-between">
+    <header>
+        <h1 id="page_title" class="display-2">web 程式設計</h1>
+    </header>
+    <div class="d-flex flex-grow-1 justify-content-between">
+        <aside>
+            <h1>課表</h1>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th class="first_column"></th>
+                        <th>一</th>
+                        <th>二</th>
+                        <th>三</th>
+                        <th>四</th>
+                        <th>五</th>
+                    </tr>
+                </thead>
+                <tbody class="content">
+                    <tr>
+                        <td class="first_column">08:10</td>
+                        <td>邏輯設計</td>
+                        <td>邏輯設計實習</td>
+                        <td>計算機概論(二)</td>
+                        <td>電路學(一)</td>
+                        <td>體育</td>
+                    </tr>
+                    <tr>
+                        <td class="first_column">09:10</td>
+                        <td>普通物理電、磁、光</td>
+                        <td>邏輯設計實習</td>
+                        <td>計算機概論(二)</td>
+                        <td>電路學(一)</td>
+                        <td>體育</td>
+                    </tr>
+                    <tr>
+                        <td class="first_column">10:10</td>
+                        <td>普通物理電、磁、光</td>
+                        <td>邏輯設計實習</td>
+                        <td>全民國防教育軍事訓練</td>
+                        <td>多元文化</td>
+                        <td>微積分(二)實習</td>
+                    </tr>
+                    <tr>
+                        <td class="first_column">11:10</td>
+                        <td>普通物理電、磁、光</td>
+                        <td>邏輯設計實習</td>
+                        <td>全民國防教育軍事訓練</td>
+                        <td>多元文化</td>
+                        <td>微積分(二)實習</td>
+                    </tr>
+                    <tr>
+                        <td class="first_column">12:00</td>
+                        <td id="rest" colspan="5">午休</td>
+                    </tr>
+                    <tr>
+                        <td class="first_column">13:10</td>
+                        <td>邏輯設計</td>
+                        <td>大一日文(二)</td>
+                        <td>微積分(二)</td>
+                        <td>大學國文(二)</td>
+                        <td>Android程式設計</td>
+                    </tr>
+                    <tr>
+                        <td class="first_column">14:10</td>
+                        <td>邏輯設計</td>
+                        <td>大一日文(二)</td>
+                        <td>微積分(二)</td>
+                        <td>大學國文(二)</td>
+                        <td>Android程式設計</td>
+                    </tr>
+                    <tr>
+                        <td class="first_column">15:10</td>
+                        <td>班級活動</td>
+                        <td>計算機概論(二)</td>
+                        <td>微積分(二)</td>
+                        <td>系統程式</td>
+                        <td>Android程式設計</td>
+                    </tr>
+                    <tr>
+                        <td class="first_column">16:10</td>
+                        <td>班級活動</td>
+                        <td>計算機概論(二)</td>
+                        <td>系統程式</td>
+                        <td>系統程式</td>
+                        <td>Android程式設計</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <i class="fas fa-basketball-ball fa-5x fa-spin" style="color: chocolate;"></i>
+            <i class="fas fa-bowling-ball fa-5x fa-spin" style="color: black;"></i>
+            <i class="fas fa-volleyball-ball fa-5x fa-spin" style="color: rgb(207, 207, 207);"></i>
+            <i class="fas fa-baseball-ball fa-5x fa-spin" style="color: rgb(179, 179, 179);"></i>
+            <i class="fas fa-globe-europe fa-5x fa-spin" style="color: blue;"></i>
+            <i class="fab fa-dribbble fa-5x fa-spin" style="color: chocolate;"></i>
+            <i class="fas fa-globe fa-5x fa-spin" style="color:cornflowerblue;"></i>
+            <i class="fas fa-football-ball fa-5x fa-spin" style="color: chocolate;"></i>
+        </aside>
+        <article class="flex-grow-1">
+            <p class="h1"><strong><i class="fas fa-bullhorn"></i>  重要事項</strong></p>
+            <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-bell"></i></span>List icons can</li>
+                <li><span class="fa-li"><i class="fas fa-bell"></i></span>be used to</li>
+              </ul>
+        </article>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
