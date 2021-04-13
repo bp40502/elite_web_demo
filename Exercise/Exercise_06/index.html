@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 06</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <style>
         body {
@@ -14,6 +15,7 @@
             justify-content: space-between;
             min-height: 100vh;
             margin: 0;
+            /* overflow: visible; */
         }
         
         header {
@@ -23,6 +25,7 @@
             display: flex;
             flex-direction: row;
             align-items: flex-end;
+            padding-bottom: 20px;
         }
         
         #avatar {
@@ -33,7 +36,7 @@
         
         #name {
             margin: 0;
-            font-size: 50px;
+            font-size: 4rem;
             text-indent: 20px;
             color: white;
             text-shadow: 5px 5px 3px black;
@@ -41,29 +44,106 @@
         }
         
         #content {
-            flex-grow: 1;
+            height: 80vh;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
         }
         
         aside {
-            background-color: yellow;
-            flex-grow: 1;
+            background-color: coral;
+            border-style: solid;
+            border-color: gray;
+            border-width: thick;
+            border-radius: 30px;
+            /* flex-grow: 1; */
             padding: 0;
+            margin: 20px;
         }
         
         #index {
-            list-style-type: '↳';
+            list-style-type: '↳ ';
+            line-height: 50px;
+            font-size: 1.5rem;
+            margin: 20px 40px 20px 10px;
         }
         
-        section {
-            background-color: blue;
-            flex-grow: 6;
+        #index a:link {
+            color: black;
+            text-decoration: none;
+            /* 設定還沒瀏覽過的連結樣式 */
         }
         
-        footer {
-            background-color: red;
+        #index a:visited {
+            color: black;
+            /* 設定已經瀏覽過的連結樣式 */
+        }
+        
+        #index a:hover {
+            color: red;
+            /* 設定滑鼠移到連結上的樣式 */
+        }
+        
+        #index a:active {
+            color: blue;
+            /* 設定正在被點選的連結樣式 */
+        }
+        
+        article {
+            flex-grow: 1;
+            background-color: darkgray;
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .section_title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 20px 0;
+        }
+        
+        #profile,
+        #education {
+            font-size: 1.2rem;
+            align-self: center;
+        }
+        
+        #work_experence>div {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .card_work {
+            background-color: white;
+            width: 15rem;
+            text-align: center;
+            border-radius: 20px;
+            font-size: 1.5rem;
+            margin: 20px 20px;
+        }
+        
+        .card_work img {
+            width: 150px;
+        }
+        
+        #assignment>div {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #assignment>div>div {
+            margin: 20px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        
+        #assignment>div img {
+            flex-grow: 1;
+            width: 150px;
         }
     </style>
 </head>
@@ -77,20 +157,74 @@
     <div id="content">
         <aside>
             <ul id="index">
-                <li>個人資料</li>
-                <li>學歷</li>
-                <li>工作經歷</li>
-                <li>作品附件</li>
+                <li><a href="#profile">個人簡介</a></li>
+                <li><a href="#education">學歷</a></li>
+                <li><a href="#work_experence">工作經歷</a></li>
+                <li><a href="#assignment">作品附件</a></li>
             </ul>
         </aside>
-        <section>
-
-        </section>
+        <article>
+            <section id="profile">
+                <h1 class="section_title">個人簡介</h1>
+                <div>
+                    <p>我的名字叫陳宥任，2020年6月從逢甲大學通訊系畢業，曾於肯德基
+                        <br> 與迷客夏打工過，因為有了這些經驗，讓我在跟客人與同事間的應
+                        <br> 對更加熟練。出於興趣，我常在空閒時間閱讀日文，並通過了N3日
+                        <br> 文檢定。
+                    </p>
+                    <p>我的個性非常的積極獨立，做事也相當有行動力，我相信無論是那一
+                        <br> 種工作，最重要的還是自己本身對工作的熱誠、責任感和一顆肯學
+                        <br> 習的心，也因為責任心促使我不斷成長和學習。
+                        <br>
+                    </p>
+                </div>
+            </section>
+            <section id="education">
+                <h1 class="section_title">學歷</h1>
+                <div>
+                    <p>教育程度：大學</p>
+                    <p>最高學歷：逢甲大學 通訊工程學系</p>
+                </div>
+            </section>
+            <section id="work_experence">
+                <h1 class="section_title">工作經歷</h1>
+                <div>
+                    <div class="card_work">
+                        <img src="image/KFC.PNG">
+                        <p>肯德基</p>
+                        <p>2018 / 1 ~ 2019 / 5</p>
+                    </div>
+                    <div class="card_work">
+                        <img src="image/MilkShop.PNG">
+                        <p>迷克夏</p>
+                        <P>2019 / 9 ~ 2020 / 5</P>
+                    </div>
+                </div>
+            </section>
+            <section id="assignment">
+                <h1 class="section_title">作品附件</h1>
+                <div>
+                    <div>
+                        <a href="../Exercise_08/index.html" target="_blank"><img src="image/Exercise_08.PNG"></a>
+                        <p>利用css畫出苦力怕</p>
+                    </div>
+                    <div>
+                        <a href="../Exercise_10/index.html" target="_blank"><img src="image/Exercise_10.PNG"></a>
+                        <p>利用css將圖片放進表格中</p>
+                    </div>
+                    <div>
+                        <a href="../Exercise_11/index.html" target="_blank"><img src="image/Exercise_11.PNG"></a>
+                        <p>利用flex切版</p>
+                    </div>
+                </div>
+            </section>
+        </article>
     </div>
 
-    <footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
-    </footer>
+
 </body>
 
 </html>
